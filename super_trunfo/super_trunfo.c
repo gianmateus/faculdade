@@ -15,7 +15,7 @@ int main() {
   // Entrada de dados - Carta 1
   printf("Carta 1\n");
   printf("Digite o Estado (letra): ");
-  scanf("%c", &estado1);
+  scanf(" %c", &estado1); // Added space before %c to consume newline
 
   printf("Digite o Codigo da carta (ex:A01): ");
   scanf("%s", codigo1);
@@ -32,7 +32,7 @@ int main() {
   printf("Digite a Area: ");
   scanf("%f", &area1);
 
-  printf("Digite o PIB: ");
+  printf("Digite o PIB (use ponto para decimais): ");
   scanf("%f", &pib1);
 
   // printf("Digite a Densidade: ");
@@ -44,7 +44,7 @@ int main() {
   // Entrada de dados - Carta 2
   printf("Carta 2\n");
   printf("Digite o Estado (letra): ");
-  scanf("%c", &estado2);
+  scanf(" %c", &estado2); // Added space before %c to consume newline
 
   printf("Digite o Codigo da carta (ex:A01): ");
   scanf("%s", codigo2);
@@ -61,7 +61,7 @@ int main() {
   printf("Digite a Area: ");
   scanf("%f", &area2);
 
-  printf("Digite o PIB: ");
+  printf("Digite o PIB (use ponto para decimais): ");
   scanf("%f", &pib2);
 
   // printf("Digite a Densidade: ");
