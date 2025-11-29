@@ -18,10 +18,10 @@ int main() {
   scanf("%c", &estado1);
 
   printf("Digite o Codigo da carta (ex:A01): ");
-  scanf("%s", &codigo1);
+  scanf("%s", codigo1);
 
   printf("Digite o Nome da Cidade: ");
-  scanf("%s", &nomeCidade1);
+  scanf("%s", nomeCidade1);
 
   printf("Digite a Populacao: ");
   scanf("%d", &populacao1);
@@ -35,11 +35,11 @@ int main() {
   printf("Digite o PIB: ");
   scanf("%f", &pib1);
 
-  printf("Digite a Densidade: ");
-  scanf("%f", &densidade1);
+  // printf("Digite a Densidade: ");
+  // scanf("%f", &densidade1);
 
-  printf("Digite o PIB per Capita: ");
-  scanf("%f", &pibPerCapita1);
+  // printf("Digite o PIB per Capita: ");
+  // scanf("%f", &pibPerCapita1);
 
   // Entrada de dados - Carta 2
   printf("Carta 2\n");
@@ -47,10 +47,10 @@ int main() {
   scanf("%c", &estado2);
 
   printf("Digite o Codigo da carta (ex:A01): ");
-  scanf("%s", &codigo2);
+  scanf("%s", codigo2);
 
   printf("Digite o Nome da Cidade: ");
-  scanf("%s", &nomeCidade2);
+  scanf("%s", nomeCidade2);
 
   printf("Digite a Populacao: ");
   scanf("%d", &populacao2);
@@ -64,11 +64,11 @@ int main() {
   printf("Digite o PIB: ");
   scanf("%f", &pib2);
 
-  printf("Digite a Densidade: ");
-  scanf("%f", &densidade2);
+  // printf("Digite a Densidade: ");
+  // scanf("%f", &densidade2);
 
-  printf("Digite o PIB per Capita: ");
-  scanf("%f", &pibPerCapita2);
+  // printf("Digite o PIB per Capita: ");
+  // scanf("%f", &pibPerCapita2);
 
   // Cálculos (sem estruturas de decisão ou repeticão)
   // Densidade = populacao / area
@@ -111,7 +111,11 @@ int main() {
   superPoder2 = (float)populacao2 + area2 + pib2 + pibPerCapita2 +
                 pontosTuristicos2 - densidade2;
 
-  printf("Super poder carta 1 > Carta 2: %d\n", superPoder1 > superPoder2);
+  if (superPoder1 > superPoder2) {
+    printf("Carta 1 venceu\n");
+  } else {
+    printf("Carta 2 venceu\n");
+  }
 
   return 0;
 }
