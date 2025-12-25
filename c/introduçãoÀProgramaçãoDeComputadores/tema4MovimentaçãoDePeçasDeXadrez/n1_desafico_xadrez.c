@@ -18,7 +18,7 @@ int main() {
   printf("\n");
 
   // --- Movimentação do BISPO ---
-  // Utiliyando a estrutura WHILE: executa enquanto a condição for verdadeira.
+  // Utilizando a estrutura WHILE: executa enquanto a condição for verdadeira.
   printf("Moviemnto do Bispo:\n");
   int b = 1;
   while (b <= MOVIMENTO_BISPO) {
