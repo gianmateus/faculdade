@@ -36,5 +36,17 @@ int main() {
     printf("Esquerda\n");
     r++;
   } while (r <= MOVIMENTO_RAINHA);
+
+  // --- Movimentação do CAVALO ---
+  // Utilizando a estrutura WHILE-FOR: ideal quando sabemos o número exato de
+  // repetições.
+  int movimentoCompleto = 1;
+  while (movimentoCompleto--) {
+    for (int i = 0; i < 2; i++) {
+      printf("Cima\n");
+    }
+    printf("Direita\n");
+  }
+
   return 0;
 }
