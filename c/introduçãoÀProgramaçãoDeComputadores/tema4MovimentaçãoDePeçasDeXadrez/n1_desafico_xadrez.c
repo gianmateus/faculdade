@@ -1,5 +1,26 @@
 #include <stdio.h>
 
+void moverTorre(int casas) {
+  if (casas > 0) {
+    printf("Direita\n");
+    moverTorre(casas - 1);
+  }
+}
+
+void moverBispo(int casas) {
+  if (casas > 0) {
+    printf("Cima, Direita\n");
+    moverBispo(casas - 1);
+  }
+}
+
+void moverRainha(int casas) {
+  if (casas > 0) {
+    printf("Esquerda\n");
+    moverRainha(casas - 1);
+  }
+}
+
 int main() {
 
   // Definição dos movimentos
@@ -9,37 +30,19 @@ int main() {
   const int MOVIMENTO_RAINHA = 8;
 
   // --- Movimentação da TORRE ---
-  // Utilizando a estrutura FOR: ideal quando sabemos o número exato de
-  // repetições.
+
   printf("Movimento da torre:\n");
-  for (int i = 0; i < MOVIMENTO_TORRE; i++) {
-    printf("Direita\n");
-  }
-  printf("\n");
+  moverTorre(MOVIMENTO_TORRE);
 
   // --- Movimentação do BISPO ---
-  // Utilizando a estrutura WHILE: executa enquanto a condição for verdadeira.
   printf("Moviemnto do Bispo:\n");
-  int b = 1;
-  while (b <= MOVIMENTO_BISPO) {
-    printf("Cima, Direita\n");
-    b++;
-  }
-  printf("\n");
+  moverBispo(MOVIMENTO_BISPO);
 
   // --- Movimentação da RAINHA ---
-  // Utilizando a estrutura DO-WHILE: garante que o código execute ao menos uma
-  // vez.
   printf("Movimento da Rainha:\n");
-  int r = 1;
-  do {
-    printf("Esquerda\n");
-    r++;
-  } while (r <= MOVIMENTO_RAINHA);
+  moverRainha(MOVIMENTO_RAINHA);
 
   // --- Movimentação do CAVALO ---
-  // Utilizando a estrutura WHILE-FOR: ideal quando sabemos o número exato de
-  // repetições.
   int movimentoCompleto = 1;
   while (movimentoCompleto--) {
     for (int i = 0; i < 2; i++) {
