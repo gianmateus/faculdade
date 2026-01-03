@@ -21,6 +21,16 @@ void moverRainha(int casas) {
   }
 }
 
+void moverCavalo(int casasCima, int casasDireita) {
+  if (casasCima > 0) {
+    printf("Cima\n");
+    moverCavalo(casasCima - 1, casasDireita);
+  } else if (casasDireita > 0) {
+    printf("Direita\n");
+    moverCavalo(0, casasDireita - 1);
+  }
+}
+
 int main() {
 
   // Definição dos movimentos
@@ -28,6 +38,8 @@ int main() {
   const int MOVIMENTO_TORRE = 5;
   const int MOVIMENTO_BISPO = 5;
   const int MOVIMENTO_RAINHA = 8;
+  const int MOVIMENTO_CAVALO_CIMA = 2;
+  const int MOVIMENTO_CAVALO_DIREITA = 1;
 
   // --- Movimentação da TORRE ---
 
@@ -43,13 +55,8 @@ int main() {
   moverRainha(MOVIMENTO_RAINHA);
 
   // --- Movimentação do CAVALO ---
-  int movimentoCompleto = 1;
-  while (movimentoCompleto--) {
-    for (int i = 0; i < 2; i++) {
-      printf("Cima\n");
-    }
-    printf("Direita\n");
-  }
+  printf("Movimento do Cavalo:\n");
+  moverCavalo(MOVIMENTO_CAVALO_CIMA, MOVIMENTO_CAVALO_DIREITA);
 
   return 0;
 }
