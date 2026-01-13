@@ -78,12 +78,19 @@ int main() {
 
   int tabuleiro[10][10] = {0};
 
-  // posicionamento navio horizontal
+  // posicionamento navio 1horizontal
   for (int j = 3; j < 6; j++) {
     tabuleiro[2][j] = 3;
   }
 
-  // posicionamento navio vertical
+  // posicionamento navio 1 na diagonal
+  int linha = 4;
+  for (int coluna = 1; coluna < 4; coluna++) {
+    tabuleiro[linha][coluna] = 3;
+    linha++;
+  }
+
+  // posicionamento navio 1vertical
   for (int i = 5; i < 8; i++) {
     tabuleiro[i][8] = 3;
   }
