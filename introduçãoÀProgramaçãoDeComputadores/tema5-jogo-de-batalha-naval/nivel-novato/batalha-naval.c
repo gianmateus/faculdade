@@ -90,6 +90,13 @@ int main() {
     linha++;
   }
 
+  // posicionamento navio 2 na diagonal
+  int linha2 = 0;
+  for (int coluna2 = 5; coluna2 < 8; coluna2++) {
+    tabuleiro[linha2][coluna2] = 3;
+    linha2++;
+  }
+
   // posicionamento navio 1vertical
   for (int i = 5; i < 8; i++) {
     tabuleiro[i][8] = 3;
